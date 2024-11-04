@@ -4,10 +4,10 @@ $db_host = '34.154.234.240';
 $db_name = 'image_catalog';
 $db_user = 'appmod-phpapp-user';
 $db_pass = 'fo,hpK/:Yon@B;+q';
-$db_host = getenv('DB_HOST') ?: _______;
+$db_host = getenv('DB_HOST') ?: 'unknown DB_HOST';
 $db_name = getenv('DB_NAME') ?: 'image_catalog';
 $db_user = getenv('DB_USER') ?: 'appmod-phpapp-user';
-$db_pass = getenv('DB_PASS') ?: _______;
+$db_pass = getenv('DB_PASS') ?: 'unknown DB_PASS';
 
 try {
     $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
