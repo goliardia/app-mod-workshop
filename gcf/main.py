@@ -21,7 +21,8 @@ import pymysql.cursors
 
 
 # Replace with your project ID
-PROJECT_ID = "your-project-id"
+PROJECT_ID = 'php-amarcord-riccardo-prova'
+
 GEMINI_MODEL = "gemini-1.5-pro"
 DEFAULT_PROMPT = "Generate a caption for this image: "
 
