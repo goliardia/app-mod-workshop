@@ -23,7 +23,7 @@ APP_VERSION="$(cat VERSION)"
 #    --set-env-vars DB_PASS="$DB_PASS" \
 ## DB_PASS: projects/839850161816/secrets/php-amarcord-db-pass
 gcloud --project "$PROJECT_ID" run deploy \
-    php-amarcord-bin \
+    php-amarcord-dev \
     --source . \
     --port 80 \
     --set-secrets DB_PASS="$SECRET_MANAGER_PERMAURL_DB_PASS" \
