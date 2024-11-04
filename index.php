@@ -29,5 +29,9 @@ $images = $stmt->fetchAll();
                 <button type="submit">Segnala come Inappropriata</button>
             </form>
         <?php endif; ?>
+        <?php if (!empty($image['description'])): ?>
+            <p class="font-bold">Gemini Caption:</p>
+            <p class="italic"><?php echo $image['description']; ?></p>
+        <?php endif; ?>
     </div>
 <?php endforeach; ?>

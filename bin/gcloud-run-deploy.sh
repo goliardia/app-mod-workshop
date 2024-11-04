@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DEPLOY_VER='1.1b'
+DEPLOY_VER='1.2'
+
+set -euo pipefail
 
 ########################
 # CHANGELOG
@@ -19,9 +21,7 @@ set -euo pipefail
 # ERROR: (gcloud.run.deploy) spec.template.spec.containers[0].env: The following reserved env names were provided: PORT. These values are automatically set by the system.
 SECRET_MANAGER_PERMAURL_DB_PASS="projects/$PROJECT_NUMBER/secrets/php-amarcord-db-pass"
 APP_VERSION="$(cat VERSION)"
-# For Riccardo
-#    --set-env-vars DB_PASS="$DB_PASS" \
-## DB_PASS: projects/839850161816/secrets/php-amarcord-db-pass
+
 gcloud --project "$PROJECT_ID" run deploy \
     php-amarcord-dev \
     --source . \
